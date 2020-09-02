@@ -1,0 +1,7 @@
+input: [1,3,9,0,1,2,5,8,1]
+
+1. bubble sort
+
+2. selection sort
+
+3. insertion sort

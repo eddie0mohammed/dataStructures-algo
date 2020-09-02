@@ -1,0 +1,23 @@
+
+RADIX SORT
+
+1. getDigit Helper
+returns a digit in num at the given place
+
+
+2. digitCount
+returns the size of the digit passed
+
+3. mostDigits
+return the size of the longest digits passed from the a list
+
+4. Radix Sort
+get longest digit from list
+loop from k = 0 to k < longest digit
+create array of 10 empty arrays (bucketList)
+loop over each element and get digit k of that element
+add to respective kth array in bucketList
+
+convert back into 1 array
+
+finally returns arr;

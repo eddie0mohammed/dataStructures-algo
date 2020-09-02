@@ -1,0 +1,7 @@
+Merge Sort
+
+Takes in an array and use divide and conquer approach to split array
+into sub arrays until each sub arrays contain only 1 elem.
+
+then merges the arrays together sorting them along the way.
+uses a recursive approach

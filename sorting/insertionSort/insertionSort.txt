@@ -1,0 +1,10 @@
+INSERTION SORT
+
+starts at 1
+tracks current elem at i
+
+loop for all elem from i to 0 and greater than the current elem
+moves elem at i to i + 1
+
+
+moves elem at i + 1 to current

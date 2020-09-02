@@ -1,0 +1,29 @@
+collect all odd values in an array recursively
+
+input: arr of nums
+output: arr of odd num
+
+
+---------------------------------------------
+
+write a function that takes an integer and an exponent 
+and calculate the power
+
+---------------------------------------------
+
+factorial
+
+---------------------------------------------
+
+write a function that takes an array of integers and 
+return the product of all the elements in the array
+
+----------------------------------------------
+
+write a function that takes a number and sums all the numbers
+from 0 to that number inclusive
+
+----------------------------------------------
+
+write a function that takes a number n and returns the nth
+Fibbonacci sequence

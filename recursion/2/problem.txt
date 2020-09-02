@@ -1,0 +1,20 @@
+
+1. reverse string recursively
+
+write a  recursive function which accepts
+a string and returns a new string in reverse
+
+2. isPalindrome
+
+write a function which return true if the string passed to 
+it is a Palindrome. Returns false otherwise.
+
+3. write a function called calledRecursive which 
+accepts an array and a callback. the function returns true if a single element
+in the array return true when passed to the callback.
+otherwise returns false.
+
+
+3. flatten
+write a function which takes an array and return a new array with all values
+flattened;

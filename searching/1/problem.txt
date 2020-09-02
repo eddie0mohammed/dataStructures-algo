@@ -1,0 +1,8 @@
+
+1. linear search
+
+2. binary search
+
+3. Naive string search
+
+4. KNP algorithms

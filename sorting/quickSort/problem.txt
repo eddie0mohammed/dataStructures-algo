@@ -1,0 +1,18 @@
+QUICK SORT
+
+recursive
+
+1. pivot helper (arr, start = 0, end = arr.length - 1)
+select a pivot elem. loop through the array and moves every elem smaller than
+the pivot elem to the left of the pivot and moves every elem greater that
+the selected pivot to the right of the pivot;
+
+finally returns the index of the pivot elem.
+
+
+2. quickSort function  (arr, left = 0, right = arr.length - 1)
+recursive
+while left < right 
+use helper method to find pivot index;
+calls quickSort on left part 0 to pivot - 1;
+calls quickSort on right part pivot + 1 to arr.length - 1;

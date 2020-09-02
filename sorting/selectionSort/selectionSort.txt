@@ -1,0 +1,7 @@
+
+Selection Sort
+
+find min elem and swap it with the current elem
+
+tracks the current element
+if elem at i is less, swap with current
