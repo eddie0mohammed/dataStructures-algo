@@ -1,6 +1,6 @@
 
 class Node {
-    constructor(value){
+    constructor(value, next){
         this.value = value;
         this.next = null;
     }
@@ -28,11 +28,11 @@ class SinglyLinkedList {
 
     pop = () => {
         if (!this.head){
-            return null;
+            return undefined;
         }
         let current = this.head;
         let newTail = current;
-        while (current.next){
+        while (current.next !== null){
             newTail = current;
             current = current.next;
         }
@@ -50,65 +50,51 @@ class SinglyLinkedList {
         if (!this.head){
             return undefined;
         }
-        let oldHead = this.head;
-        this.head = oldHead.next;
-        oldHead.next = null;
+        let current = this.head;
+        this.head = current.next;
         this.length = this.length - 1;
         if (this.length === 0){
             this.head = null;
             this.tail = null;
         }
-
-        return oldHead;
+        return current;
     }
 
     unshift = (val) => {
         let newNode = new Node(val);
-        newNode.next = this.head;
-        this.head = newNode;
+        if (!this.head){
+            this.head = newNode;
+            this.tail = this.head;
+        }else{
+            newNode.next = this.head;
+            this.head = newNode;
+        }
         this.length = this.length + 1;
         return this;
-    }
-
-    printList = () => {
-        let current = this.head;
-        while (current.next !== null){
-            console.log(current.value);
-            console.log('->');
-            current = current.next;
-        }
-
-        console.log(current.value);
-        console.log(this.length);
-    }
+    } 
 }
 
-
 const list = new SinglyLinkedList();
-console.log(list);
 
-console.log('#####PUSH#####');
+console.log(list);
 console.log(list.push(1));
 console.log(list.push(2));
 console.log(list.push(3));
 
-// console.log('#####SHIFT#####');
-// console.log(list.shift());
+
+// console.log(list.pop());
+// console.log(list.pop());
+// console.log(list.pop());
+// console.log(list.pop());
+
 // console.log(list.shift());
 // console.log(list.shift());
 // console.log(list.shift());
 // console.log(list.shift());
 
-console.log('#####UNSHIFT#####');
 console.log(list.unshift(10));
-console.log(list.unshift(11));
+console.log(list.unshift(20));
+console.log(list.unshift(30));
 
-console.log(list.printList());
 
-// console.log('#####POP#####');
-// console.log(list.pop());
-// console.log(list.pop());
-// console.log(list.pop());
-// console.log(list.pop());
-
-// console.log(list);
+console.log(list);
