@@ -1,53 +1,44 @@
 
 const getDigit = (num, place) => {
-    
+
     let str = num.toString();
-    if (place >= str.length) return 0;
-    return str[str.length - 1 - place];
+    if (place >= str.length){
+        return 0;
+    }
+    return parseInt(str[str.length - 1 - place]);
 }
 
-// console.log(getDigit(123, 2));
+// console.log(getDigit(12, 0));
 
 
-const digitCount = (num) => {
-
-    console.log(num.toString());
+const getDigitLength = (num) => {
     return num.toString().length;
 }
 
-// console.log(digitCount(1012));
-
-const getMostDigtis = (arr) => {
-
-    let maxDigitLength = 0;
+const getMaxLength = (arr) => {
+    let max = 0;
     arr.forEach(elem => {
-        let currentLength = elem.toString().length;
-        if (currentLength > maxDigitLength){
-            maxDigitLength = currentLength;
+        if (getDigitLength(elem) > max){
+            max = getDigitLength(elem);
         }
     });
-    return maxDigitLength;
+    return max;
 }
 
-// console.log(getMostDigtis([12,123,1234]));
-
-
 const radixSort = (arr) => {
+    let maxLength = getMaxLength(arr);
 
-    let maxDigitLength = getMostDigtis(arr);
-
-    for (let k = 0; k < maxDigitLength; k++){
-
-        let bucketList = Array.from({length: 10}, () => []);
+    for (let k = 0; k < maxLength; k++){
+        let digitBucket = Array.from({length: 10}, () => []);
         for (let i = 0; i < arr.length; i++){
-
             let digit = getDigit(arr[i], k);
             // console.log(digit);
             // console.log(arr[i]);
-            bucketList[digit].push(arr[i]);
+            digitBucket[digit].push(arr[i]);
         }
+        // console.log(digitBucket);
 
-        arr = [].concat(...bucketList);
+        arr = [].concat(...digitBucket);
     }
     return arr;
 }
