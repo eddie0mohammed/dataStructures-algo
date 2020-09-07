@@ -1,0 +1,11 @@
+Doubly Linked Lists
+
+this.head
+this.tail
+this.length
+
+
+NODE
+this.next;
+this.previous;
+this.length;
