@@ -1,25 +1,40 @@
 
-//count the number of times a substring occurs in a string
-// 2 pointers (naive)
+// linked list
 
-const solution = (str, sub) => {
 
-    let p0 = 0;
-    let p1 = 0;
-    let count = 0;
-
-    for (let i = 0; i < str.length; i++){
-        if (p1 === sub.length){
-            count++;
-            p1 = 0;
-        }
-        if (str[i] === sub[p1]){
-            p1++;
-        }else{
-            p1 = 0;
-        }
+class Node {
+    constructor(value, next){
+        this.value = value;
+        this.next = next;
     }
-    return count;
 }
 
-console.log(solution('asdomgomgasdasdomgass', 'omg'));
+class SinglyLinkedList {
+    constructor(){
+        this.head = null;
+        this.tail = null;
+        this.length = 0;
+    }
+
+    push = (val) => {
+
+        const newNode = new Node(val, null);
+
+        if (!this.head) {
+            this.head = newNode;
+            this.tail = this.head;
+        }else{
+            this.tail.next = newNode;
+            this.tail = newNode;
+        }
+        this.length = this.length + 1;
+        return this;
+    }
+}
+
+const list = new SinglyLinkedList();
+
+console.log(list.push(1));
+console.log(list.push(10));
+console.log(list.push(100));
+console.log(list.push(1000));
