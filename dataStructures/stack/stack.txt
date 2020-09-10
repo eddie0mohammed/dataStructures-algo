@@ -1,0 +1,14 @@
+STACK
+
+LAST IN FIRST OUT (LIFO)
+
+-push 
+add in begining, O(1)
+
+-pop
+remove from begining, O(1)
+
+
+-head
+-tail
+-size

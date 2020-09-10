@@ -1,0 +1,14 @@
+
+QUEUE
+FIFO: first in, first out
+
+- enqueue
+add to last
+
+- dequeue
+remove from beginning
+
+
+this.first
+this.last
+this.size
