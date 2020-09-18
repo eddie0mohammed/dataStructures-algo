@@ -1,0 +1,4 @@
+
+Binary trees => only 2 branches
+
+Binary search trees => ordered, left is less than root right is greater, no duplicates
