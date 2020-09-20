@@ -1,0 +1,12 @@
+
+DEPTH FIRST SEARCH: POST ORDER
+
+visit a node after looking at its left and right
+
+
+            10
+    6               15
+3       8               20
+
+
+=> [3, 8, 6, 20, 15, 10]

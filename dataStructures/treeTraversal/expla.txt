@@ -1,0 +1,12 @@
+
+Traversing Trees
+
+1. Breadth first search
+go across horizontally
+
+2. Depth first search 
+go vertically
+
+- in-order
+- pre-order
+- post-order

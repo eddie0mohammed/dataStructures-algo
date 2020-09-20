@@ -1,0 +1,14 @@
+
+Depth First Search : pre-ORDER
+
+tranverse the tree from top to bottom
+left then right
+visiting each node
+
+
+            8
+    4              11
+1       3    10         12
+
+
+ = > [8 4 1 3 11 10 12]

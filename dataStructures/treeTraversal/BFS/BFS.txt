@@ -1,0 +1,17 @@
+
+Breadth First Search
+go across horizontally
+
+- ITERATIVE APPROACH
+
+- uses a queue (array)
+and visited(array)
+
+-places root node in the queue
+- loop as long as there is something in the queue
+    - dequeue a node from queue and push to visited
+    - if there is a left on the dequeued node, add it to queue,
+    - if there is a right on the dequeued node, add it to the queue
+    -
+
+    -finally return the visited variable
