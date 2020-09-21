@@ -30,11 +30,12 @@ class BST {
                     }
                 }else {
                     if (current.right){
-                        current = current.right;
+                        current = current.right
                     }else {
                         current.right = newNode;
                         return this;
                     }
+
                 }
             }
         }
@@ -45,24 +46,26 @@ class BST {
         let current = this.root;
         let found = false;
         while (current && !found){
-            if (currrent.value === val){
-                return current;
+            if (current.value === val){
+                found = true;
             }else if (val < current.value){
                 current = current.left;
             }else if (val > current.value){
                 current = current.right;
             }
         }
+
         if (!found) return false;
         return current;
     }
 
+
     BFS = () => {
         if (!this.root) return null;
+        let node = this.root;
         let data = [];
         let queue = [];
-
-        let node = this.root;
+    
         queue.push(node);
         while (queue.length > 0){
             node = queue.shift();
@@ -72,7 +75,6 @@ class BST {
             if (node.right){
                 queue.push(node.right);
             }
-
             data.push(node.value);
         }
         return data;
@@ -81,6 +83,7 @@ class BST {
     DFS_preOrder = () => {
         if (!this.root) return null;
         let current = this.root;
+
         let data = [];
         const traverse = (node) => {
             data.push(node.value);
@@ -88,18 +91,19 @@ class BST {
                 traverse(node.left);
             }
             if (node.right){
-                traverse(node.right)
+                traverse(node.right);
             }
         }
+
         traverse(current);
         return data;
     }
 
     DFS_postOrder = () => {
         if (!this.root) return null;
-        let data = [];
         let current = this.root;
-
+        let data = [];
+        
         const traverse = (node) => {
             if (node.left){
                 traverse(node.left);
@@ -109,7 +113,6 @@ class BST {
             }
             data.push(node.value);
         }
-
         traverse(current);
         return data;
     }
@@ -133,7 +136,6 @@ class BST {
     }
 }
 
-
 const tree = new BST();
 tree.insert(10);
 tree.insert(6);
@@ -143,9 +145,6 @@ tree.insert(8);
 tree.insert(14);
 tree.insert(20);
 
-// console.log(tree);
 
-console.log(tree.BFS());
-// console.log(tree.DFS_preOrder());
-// console.log(tree.DFS_postOrder())
-// console.log(tree.DFS_inOrder())
+console.log(tree.DFS_preOrder());
+
