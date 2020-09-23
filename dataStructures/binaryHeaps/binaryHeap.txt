@@ -1,0 +1,38 @@
+
+Binary Heap
+
+similar to BST 
+
+Types:
+1. min heap
+parent nodes are always smaller than child nodes
+2. max heap
+parent nodes are always larger to child nodes
+
+methods: 
+1. insert
+2. remove
+
+
+
+important: 
+A binary heap is as compact as possible.
+all children of each node are as full as they can be.
+ => Left children are filled out first
+
+
+
+ Representing a heap:
+
+ 1.parent @ index n:
+ left child => 2n + 1
+ right child => 2n + 2
+
+
+2. child at index n:
+parent => Math.floor((n - 1) / 2);
+
+
+class MaxBinaryHead {
+    this.values = [];
+}
