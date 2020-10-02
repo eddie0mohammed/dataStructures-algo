@@ -21,7 +21,7 @@ class MaxBinaryHeap {
             if (parentElem < currentElem){
                 this.values[parentIndex] = currentElem;
                 this.values[currentIndex] = parentElem;
-                currentIndex = parentIndex;
+                currentIndex = parentIndex
             }else {
                 break;
             }
@@ -35,7 +35,7 @@ class MaxBinaryHeap {
         if (this.values.length > 0){
             this.values[0] = last;
             this.sinkDown();
-        }        
+        }
         return max;
     }
 
@@ -43,13 +43,12 @@ class MaxBinaryHeap {
         let currentIndex = 0;
         let currentElem = this.values[currentIndex];
         const length = this.values.length;
-        
         while (true){
             let leftChildIndex = 2 * currentIndex + 1;
             let rightChildIndex = 2 * currentIndex + 2;
             let leftChild;
             let rightChild;
-            let swap = null;    
+            let swap = null;
             if (leftChildIndex < length){
                 leftChild = this.values[leftChildIndex];
                 if (leftChild > currentElem){
@@ -59,7 +58,7 @@ class MaxBinaryHeap {
 
             if (rightChildIndex < length){
                 rightChild = this.values[rightChildIndex];
-                if (swap === null && rightChild > currentElem ||
+                if (swap === null && rightChild > currentElem || 
                     (swap !== null && rightChild > leftChild)){
                         swap = rightChildIndex;
                     }
@@ -69,15 +68,16 @@ class MaxBinaryHeap {
                 this.values[currentIndex] = this.values[swap];
                 this.values[swap] = currentElem;
                 currentIndex = swap;
-            }else {
+            }else{
                 break;
             }
         }
     }
 }
 
-const heap = new MaxBinaryHeap();
 
+
+const heap = new MaxBinaryHeap();
 heap.insert(41);
 heap.insert(39);
 heap.insert(33);
@@ -89,15 +89,10 @@ heap.insert(55);
 heap.insert(199);
 heap.insert(45);
 
+heap.extractMax();
 
-
-// heap.extractMax();
-// heap.extractMax();
-// heap.extractMax();
-// heap.extractMax();
-// heap.extractMax();
-// heap.extractMax();
-// heap.extractMax();
-// heap.extractMax();
+heap.extractMax();
+heap.extractMax();
+heap.extractMax();
 
 console.log(heap);
