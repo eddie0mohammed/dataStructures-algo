@@ -14,10 +14,10 @@ class MinBinaryHeap {
         let currentElem = this.values[currentIndex];
         while (currentIndex > 0){
             let parentIndex = Math.floor((currentIndex - 1) / 2);
-            let parentElem = this.values[parentIndex];
-            if (parentElem > currentElem){
+            let parentElement = this.values[parentIndex];
+            if (currentElem < parentElement){
+                this.values[currentIndex] = parentElement;
                 this.values[parentIndex] = currentElem;
-                this.values[currentIndex] = parentElem;
                 currentIndex = parentIndex;
             }else {
                 break;
@@ -26,6 +26,7 @@ class MinBinaryHeap {
     }
 
     extractMin = () => {
+        if (this.values.length === 0) return null;
         let min = this.values[0];
         let last = this.values.pop();
         if (this.values.length > 0){
@@ -85,12 +86,11 @@ heap.insert(55);
 heap.insert(199);
 heap.insert(45);
 
-// heap.extractMin();
-// heap.extractMin();
-// heap.extractMin();
-// heap.extractMin();
-// heap.extractMin();
-// heap.extractMin();
+
+heap.extractMin();
+heap.extractMin();
+heap.extractMin();
+heap.extractMin();
 
 
 console.log(heap);
